@@ -1,0 +1,31 @@
+{
+    "name": "sorethea/filament-modules",
+    "description": "Create laravel filament module.",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sorethea Ok",
+            "email": "sorethea@gmail.com"
+        }
+    ],
+    "require": {
+        "filament/filament": "2.*",
+        "nwidart/laravel-modules": "9.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sorethea\\FilamentModule\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sorethea\\FilamentModule\\Providers\\FilamentModuleServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    }
+}

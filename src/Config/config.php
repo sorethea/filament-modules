@@ -1,0 +1,119 @@
+<?php
+return [
+    'modules' => [
+        'enabled' => false,
+        'path' => base_path('modules/module'),
+        'files' => [
+            'scaffold/config' => 'Config/config.php',
+            'composer' => 'composer.json',
+            'package' => 'package.json',
+        ],
+        'replacements' => [
+            'routes/web' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'routes/api' => ['LOWER_NAME'],
+            'vite' => ['LOWER_NAME'],
+            'json' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE', 'PROVIDER_NAMESPACE'],
+            'views/index' => ['LOWER_NAME'],
+            'views/master' => ['LOWER_NAME', 'STUDLY_NAME'],
+            'scaffold/config' => ['STUDLY_NAME'],
+            'composer' => [
+                'LOWER_NAME',
+                'STUDLY_NAME',
+                'VENDOR',
+                'AUTHOR_NAME',
+                'AUTHOR_EMAIL',
+                'MODULE_NAMESPACE',
+                'PROVIDER_NAMESPACE',
+            ],
+        ],
+        'gitkeep' => true,
+    ],
+    'paths' => [
+        /*
+        |--------------------------------------------------------------------------
+        | Modules path
+        |--------------------------------------------------------------------------
+        |
+        | This path used for save the generated module. This path also will be added
+        | automatically to list of scanned folders.
+        |
+        */
+
+        'modules' => base_path('Modules'),
+        /*
+        |--------------------------------------------------------------------------
+        | Modules assets path
+        |--------------------------------------------------------------------------
+        |
+        | Here you may update the modules assets path.
+        |
+        */
+
+        'assets' => public_path('modules'),
+        /*
+        |--------------------------------------------------------------------------
+        | The migrations path
+        |--------------------------------------------------------------------------
+        |
+        | Where you run 'module:publish-migration' command, where do you publish the
+        | the migration files?
+        |
+        */
+
+        'migration' => base_path('database/migrations'),
+        /*
+        |--------------------------------------------------------------------------
+        | Generator path
+        |--------------------------------------------------------------------------
+        | Customise the paths where the folders will be generated.
+        | Set the generate key to false to not generate that folder
+        */
+        'generator' => [
+            'config' => ['path' => 'Config', 'generate' => true],
+            'page' => ['path' => 'Filament/Pages', 'generate' => true],
+            'command' => ['path' => 'Console', 'generate' => true],
+            'migration' => ['path' => 'Database/Migrations', 'generate' => true],
+            'seeder' => ['path' => 'Database/Seeders', 'generate' => true],
+            'factory' => ['path' => 'Database/factories', 'generate' => true],
+            'model' => ['path' => 'Models', 'generate' => true],
+            'routes' => ['path' => 'Routes', 'generate' => false],
+            'controller' => ['path' => 'Http/Controllers', 'generate' => false],
+            'filter' => ['path' => 'Http/Middleware', 'generate' => false],
+            'request' => ['path' => 'Http/Requests', 'generate' => false],
+            'provider' => ['path' => 'Providers', 'generate' => true],
+            'assets' => ['path' => 'Resources/assets', 'generate' => false],
+            'lang' => ['path' => 'Resources/lang', 'generate' => false],
+            'views' => ['path' => 'Resources/views', 'generate' => false],
+            'test' => ['path' => 'Tests/Unit', 'generate' => false],
+            'test-feature' => ['path' => 'Tests/Feature', 'generate' => false],
+            'repository' => ['path' => 'Repositories', 'generate' => false],
+            'event' => ['path' => 'Events', 'generate' => false],
+            'listener' => ['path' => 'Listeners', 'generate' => false],
+            'policies' => ['path' => 'Policies', 'generate' => false],
+            'rules' => ['path' => 'Rules', 'generate' => false],
+            'jobs' => ['path' => 'Jobs', 'generate' => false],
+            'emails' => ['path' => 'Emails', 'generate' => false],
+            'notifications' => ['path' => 'Notifications', 'generate' => false],
+            'resource' => ['path' => 'Filament/Resources', 'generate' => true],
+            'component-view' => ['path' => 'Resources/views/components', 'generate' => false],
+            'component-class' => ['path' => 'View/Components', 'generate' => false],
+        ],
+    ],
+    /*
+|--------------------------------------------------------------------------
+| Composer File Template
+|--------------------------------------------------------------------------
+|
+| Here is the config for composer.json file, generated by this package
+|
+*/
+
+    'composer' => [
+        'vendor' => 'sorethea',
+        'author' => [
+            'name' => 'Sorethea OK',
+            'email' => 'sorethea@gmail.com',
+        ],
+        'composer-output' => false,
+    ],
+];

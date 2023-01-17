@@ -1,0 +1,19 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Filament\PluginServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Modules\$NAME$\Filament\Pages\$NAME$Page;
+
+class $CLASS$ extends PluginServiceProvider
+{
+    protected array $pages = [
+        $NAME$Page::class,
+    ];
+    protected array $resources =[];
+    public function configurePackage(Package $package): void
+    {
+        $package->name('$LOWER_NAME$');
+    }
+}

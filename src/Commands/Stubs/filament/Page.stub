@@ -8,5 +8,10 @@ class {{ class }} extends Page
 {
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
+    protected static function getNavigationGroup(): ?string
+    {
+        return config('{{ module }}.navigation-group.name');
+    }
+
     protected static string $view = '{{ view }}';
 }

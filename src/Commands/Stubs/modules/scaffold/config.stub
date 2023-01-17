@@ -1,5 +1,9 @@
 <?php
 
 return [
-    'name' => '$STUDLY_NAME$'
+    'name' => '$STUDLY_NAME$',
+    'navigation-group'=>[
+        'name' => '$STUDLY_NAME$',
+        'enabled' => true,
+    ],
 ];

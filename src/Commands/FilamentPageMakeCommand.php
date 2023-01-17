@@ -112,6 +112,7 @@ class FilamentPageMakeCommand extends Command
         if ($resource === null) {
             $this->copyStubToApp('Page', $path, [
                 'class' => $pageClass,
+                'module' => strtolower($module),
                 'namespace' => $namespace . ($pageNamespace !== '' ? "\\{$pageNamespace}" : ''),
                 'view' => $view,
             ]);

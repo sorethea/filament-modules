@@ -3,7 +3,7 @@
 return [
     'name' => '$STUDLY_NAME$',
     'navigation-group'=>[
-        'name' => '$STUDLY_NAME$',
+        'name' => '$STUDLY_NAME$ Manu',
         'enabled' => true,
     ],
 ];

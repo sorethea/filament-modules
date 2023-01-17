@@ -155,6 +155,7 @@ class FilamentResourceMakeCommand extends Command
             'formSchema' => $this->indentString($this->option('generate') ? $this->getResourceFormSchema(
                 'App\\Models' . ($modelNamespace !== '' ? "\\{$modelNamespace}" : '') . '\\' . $modelClass,
             ) : '//', 4),
+            'module' => strtolower($module),
             'moduleNamespace' => $moduleNamespace,
             'model' => $model === 'Resource' ? 'Resource as ResourceModel' : $model,
             'modelClass' => $model === 'Resource' ? 'ResourceModel' : $modelClass,

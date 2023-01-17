@@ -5,6 +5,7 @@ namespace Sorethea\FilamentModule\Providers;
 use Illuminate\Support\ServiceProvider;
 use Sorethea\FilamentModule\Commands\FilamentPageMakeCommand;
 use Sorethea\FilamentModule\Commands\FilamentProviderMakeCommand;
+use Sorethea\FilamentModule\Commands\FilamentResourceMakeCommand;
 use Sorethea\FilamentModule\Commands\ModuleMakeCommand;
 use Sorethea\FilamentModule\Commands\ProviderMakeCommand;
 
@@ -17,6 +18,7 @@ class FilamentModuleServiceProvider extends ServiceProvider
             ProviderMakeCommand::class,
             FilamentProviderMakeCommand::class,
             FilamentPageMakeCommand::class,
+            FilamentResourceMakeCommand::class,
         ]);
 
     }

@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sorethea\\Filament\\Providers\\FilamentModuleServiceProvider"
+                "Sorethea\\Filament\\Providers\\FilamentServiceProvider"
             ],
             "aliases": {
 

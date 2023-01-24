@@ -2,8 +2,7 @@
 
 namespace Sorethea\Filament\Commands;
 
-use Nwidart\Modules\Commands\GeneratorCommand;
-use Nwidart\Modules\Support\Config\GenerateConfigReader;
+use Sorethea\Filament\Support\Config\GenerateConfigReader;
 use Sorethea\Filament\Support\Stub;
 use Nwidart\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
@@ -84,7 +83,7 @@ class FilamentProviderMakeCommand extends GeneratorCommand
 
         $generatorPath = GenerateConfigReader::read('provider');
 
-        return $path . $generatorPath->getPath() . '/' . $this->getFileName() . '.php';
+        return $path . '/' . $this->getFileName() . '.php';
     }
 
 
@@ -92,6 +91,6 @@ class FilamentProviderMakeCommand extends GeneratorCommand
     {
         $module = $this->laravel['modules'];
 
-        return $module->config('paths.generator.provider.namespace') ?: $module->config('paths.generator.provider.path', 'Providers');
+        return config('filament-modules.paths.generator.provider.namespace') ?: config('filament-modules.paths.generator.provider.path', '');
     }
 }

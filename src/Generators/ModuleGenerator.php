@@ -354,16 +354,15 @@ class ModuleGenerator extends Generator
         $config = config('filament-modules.paths.generator');
         foreach ($config as $key => $folder) {
             $folder = GenerateConfigReader::read($key);
-
             if ($folder->generate() === false) {
                 continue;
             }
-
             $path = $this->module->getModulePath($this->getName()) . '/' . $folder->getPath();
-
-            $this->filesystem->makeDirectory($path, 0755, true);
-            if (config('filament-modules.modules.gitkeep')) {
-                $this->generateGitKeep($path);
+            if($folder->getPath()!='null' && !empty($folder->getPath())){
+                $this->filesystem->makeDirectory($path, 0755, true);
+                if (config('filament-modules.modules.gitkeep')) {
+                    $this->generateGitKeep($path);
+                }
             }
         }
     }
@@ -523,7 +522,7 @@ class ModuleGenerator extends Generator
         $namespace = $this->getModuleNamespaceReplacement();
         $studlyName = $this->getStudlyNameReplacement();
 
-        $provider = '"' . $namespace . '\\\\' . $studlyName . '\\\\Providers\\\\' . $studlyName . 'ServiceProvider"';
+        $provider = '"' . $namespace . '\\\\' . $studlyName . '\\\\' . $studlyName . 'ServiceProvider"';
 
         $content = str_replace($provider, '', $content);
 
@@ -567,7 +566,7 @@ class ModuleGenerator extends Generator
      */
     protected function getModuleNamespaceReplacement()
     {
-        return str_replace('\\', '\\\\', $this->module->config('namespace'));
+        return str_replace('\\', '\\\\', config('filament-modules.namespace'));
     }
 
     /**
@@ -592,6 +591,6 @@ class ModuleGenerator extends Generator
 
     protected function getProviderNamespaceReplacement(): string
     {
-        return str_replace('\\', '\\\\', GenerateConfigReader::read('provider')->getNamespace());
+        return str_replace('\\', '\\\\', $this->module->config('namespace'));
     }
 }

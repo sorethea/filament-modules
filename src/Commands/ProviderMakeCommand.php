@@ -38,8 +38,7 @@ class ProviderMakeCommand extends GeneratorCommand
     public function getDefaultNamespace(): string
     {
         $module = $this->laravel['modules'];
-
-        return  config('filament-modules.paths.generator.provider.path', 'Providers');
+        return  config('filament-modules.paths.generator.provider.path', '');
     }
 
     /**
@@ -99,10 +98,9 @@ class ProviderMakeCommand extends GeneratorCommand
     protected function getDestinationFilePath()
     {
         $path = $this->laravel['modules']->getModulePath($this->getModuleName());
-
         $generatorPath = GenerateConfigReader::read('provider');
 
-        return $path . $generatorPath->getPath() . '/' . $this->getFileName() . '.php';
+        return $path .  '/' . $this->getFileName() . '.php';
     }
 
     /**

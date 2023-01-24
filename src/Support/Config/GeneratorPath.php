@@ -17,6 +17,7 @@ class GeneratorPath
 
             return;
         }
+
         $this->path = $config;
         $this->generate = (bool) $config;
         $this->namespace = $config;

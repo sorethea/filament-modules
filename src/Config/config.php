@@ -1,5 +1,6 @@
 <?php
 return [
+    'namespace' => 'Modules',
     'modules' => [
         'enabled' => false,
         'path' => base_path('modules/module'),
@@ -80,7 +81,7 @@ return [
             'controller' => ['path' => 'Http/Controllers', 'generate' => false],
             'filter' => ['path' => 'Http/Middleware', 'generate' => false],
             'request' => ['path' => 'Http/Requests', 'generate' => false],
-            'provider' => ['path' => 'Providers', 'generate' => true],
+            'provider' => ['path' => '', 'generate' => true],
             'assets' => ['path' => 'Resources/assets', 'generate' => false],
             'lang' => ['path' => 'Resources/lang', 'generate' => false],
             'views' => ['path' => 'Resources/views', 'generate' => false],

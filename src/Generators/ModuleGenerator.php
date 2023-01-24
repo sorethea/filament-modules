@@ -421,6 +421,9 @@ class ModuleGenerator extends Generator
                 'module' => $this->getName(),
                 '--master' => true,
             ]);
+            $this->console->call('module:route-provider', [
+                'module' => $this->getName(),
+            ]);
             $this->console->call('module:make-filament-resource-provider', [
                 'module' => $this->getName(),
             ]);

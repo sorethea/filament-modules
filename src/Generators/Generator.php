@@ -1,6 +1,6 @@
 <?php
 
-namespace Sorethea\FilamentModule\Generators;
+namespace Sorethea\Filament\Generators;
 
 abstract class Generator
 {

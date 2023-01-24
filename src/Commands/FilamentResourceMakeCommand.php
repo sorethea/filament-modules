@@ -1,10 +1,10 @@
 <?php
 
-namespace Sorethea\FilamentModule\Commands;
+namespace Sorethea\Filament\Commands;
 
 use Filament\Commands\MakeResourceCommand as Command;
 use Illuminate\Support\Str;
-use Sorethea\FilamentModule\Support\Stub;
+use Sorethea\Filament\Support\Stub;
 
 
 class FilamentResourceMakeCommand extends Command

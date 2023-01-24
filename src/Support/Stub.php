@@ -1,6 +1,6 @@
 <?php
 
-namespace Sorethea\FilamentModule\Support;
+namespace Sorethea\Filament\Support;
 
 class Stub
 {

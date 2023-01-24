@@ -1,6 +1,6 @@
 <?php
 
-namespace Sorethea\FilamentModule\Commands;
+namespace Sorethea\Filament\Commands;
 
 use Filament\Commands\MakePageCommand as Command;
 use Illuminate\Support\Str;

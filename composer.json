@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Sorethea\\FilamentModule\\": "src/"
+            "Sorethea\\Filament\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Sorethea\\FilamentModule\\Providers\\FilamentModuleServiceProvider"
+                "Sorethea\\Filament\\Providers\\FilamentModuleServiceProvider"
             ],
             "aliases": {
 

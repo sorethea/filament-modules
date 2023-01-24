@@ -1,15 +1,15 @@
 <?php
 
-namespace Sorethea\FilamentModule\Providers;
+namespace Sorethea\Filament\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Sorethea\FilamentModule\Commands\FilamentPageMakeCommand;
-use Sorethea\FilamentModule\Commands\FilamentProviderMakeCommand;
-use Sorethea\FilamentModule\Commands\FilamentResourceMakeCommand;
-use Sorethea\FilamentModule\Commands\ModuleMakeCommand;
-use Sorethea\FilamentModule\Commands\ProviderMakeCommand;
+use Sorethea\Filament\Commands\FilamentPageMakeCommand;
+use Sorethea\Filament\Commands\FilamentProviderMakeCommand;
+use Sorethea\Filament\Commands\FilamentResourceMakeCommand;
+use Sorethea\Filament\Commands\ModuleMakeCommand;
+use Sorethea\Filament\Commands\ProviderMakeCommand;
 
-class FilamentModuleServiceProvider extends ServiceProvider
+class FilamentServiceProvider extends ServiceProvider
 {
     public function register()
     {

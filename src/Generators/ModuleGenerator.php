@@ -1,6 +1,6 @@
 <?php
 
-namespace Sorethea\FilamentModule\Generators;
+namespace Sorethea\Filament\Generators;
 
 use Illuminate\Config\Repository as Config;
 use Illuminate\Console\Command as Console;
@@ -8,8 +8,8 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use Nwidart\Modules\Contracts\ActivatorInterface;
 use Nwidart\Modules\FileRepository;
-use Sorethea\FilamentModule\Support\Config\GenerateConfigReader;
-use Sorethea\FilamentModule\Support\Stub;
+use Sorethea\Filament\Support\Config\GenerateConfigReader;
+use Sorethea\Filament\Support\Stub;
 
 class ModuleGenerator extends Generator
 {

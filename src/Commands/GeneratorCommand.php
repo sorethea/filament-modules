@@ -1,6 +1,6 @@
 <?php
 
-namespace Sorethea\FilamentModule\Commands;
+namespace Sorethea\Filament\Commands;
 
 use Illuminate\Console\Command;
 use Nwidart\Modules\Exceptions\FileAlreadyExistException;

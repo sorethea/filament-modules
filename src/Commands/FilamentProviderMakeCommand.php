@@ -1,10 +1,10 @@
 <?php
 
-namespace Sorethea\FilamentModule\Commands;
+namespace Sorethea\Filament\Commands;
 
 use Nwidart\Modules\Commands\GeneratorCommand;
 use Nwidart\Modules\Support\Config\GenerateConfigReader;
-use Sorethea\FilamentModule\Support\Stub;
+use Sorethea\Filament\Support\Stub;
 use Nwidart\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;

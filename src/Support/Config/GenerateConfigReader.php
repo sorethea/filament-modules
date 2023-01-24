@@ -1,6 +1,6 @@
 <?php
 
-namespace Sorethea\FilamentModule\Support\Config;
+namespace Sorethea\Filament\Support\Config;
 
 class GenerateConfigReader
 {

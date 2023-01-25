@@ -37,7 +37,7 @@ class FilamentServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__."/../Config/config.php"=> config_path('filament-modules' . '.php'),
-        ], 'config');
+        ], 'filament-modules-config');
         $this->mergeConfigFrom(
             __DIR__."/../Config/config.php", 'filament-modules'
         );

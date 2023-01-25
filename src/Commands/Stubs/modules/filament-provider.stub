@@ -6,7 +6,6 @@ use Filament\Facades\Filament;
 use Filament\Navigation\NavigationGroup;
 use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
-use Modules\$NAME$\Filament\Pages\$NAME$Page;
 
 class $CLASS$ extends PluginServiceProvider
 {
@@ -14,9 +13,6 @@ class $CLASS$ extends PluginServiceProvider
         $module = \Module::find('$LOWER_NAME$');
         return $module->isEnabled();
     }
-    protected array $pages = [
-        $NAME$Page::class,
-    ];
     protected array $resources =[];
     public function configurePackage(Package $package): void
     {
@@ -36,10 +32,10 @@ class $CLASS$ extends PluginServiceProvider
     public function boot():void
     {
         Filament::serving(function (){
-            if(config('$LOWER_NAME$.navigation-group.enabled'))
+            if(config('$LOWER_NAME$.navigation.enabled'))
             Filament::registerNavigationGroups([
                 NavigationGroup::make()
-                    ->label(config('$LOWER_NAME$.navigation-group.name'))
+                    ->label(config('$LOWER_NAME$.navigation.name'))
             ]);
         });
     }

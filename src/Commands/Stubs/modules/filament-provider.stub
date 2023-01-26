@@ -39,7 +39,7 @@ class $CLASS$ extends PluginServiceProvider
             if(config('$LOWER_NAME$.navigation-group.enabled'))
             Filament::registerNavigationGroups([
                 NavigationGroup::make()
-                    ->label(config('$LOWER_NAME$.navigation-group.name'))
+                    ->label(config('$LOWER_NAME$.navigation.name'))
             ]);
         });
         return parent::boot();

@@ -19,14 +19,14 @@ class FilamentProviderMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'module:filament-provider';
+    protected $name = 'module:make-filament-resource-provider';
 
     /**
      * The command description.
      *
      * @var string
      */
-    protected $description = 'Create a new filament service provider for the specified module.';
+    protected $description = 'Create a new filament resource service provider for the specified module.';
 
     /**
      * The command arguments.
@@ -60,6 +60,7 @@ class FilamentProviderMakeCommand extends GeneratorCommand
             'NAMESPACE'            => $this->getClassNamespace($module),
             'CLASS'                => $this->getFileName(),
             'LOWER_NAME'           => $module->getLowerName(),
+            'NAME'           => $module->getName(),
         ]))->render();
     }
 
@@ -88,6 +89,8 @@ class FilamentProviderMakeCommand extends GeneratorCommand
 
     public function getDefaultNamespace(): string
     {
-        return $this->laravel['modules']->getModulePath($this->getModuleName());
+        $module = $this->laravel['modules'];
+
+        return config('filament-modules.paths.generator.provider.namespace') ?: config('filament-modules.paths.generator.provider.path', '');
     }
 }

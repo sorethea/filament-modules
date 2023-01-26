@@ -38,5 +38,7 @@ class $CLASS$ extends PluginServiceProvider
                     ->label(config('$LOWER_NAME$.navigation.name'))
             ]);
         });
+
+        return parent::boot();
     }
 }
